@@ -1,0 +1,24 @@
+{% extends 'login_layout.html' %}
+{% block formsection%}
+<form method="POST" id="signupForm">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        {{ form.username }}
+    </div>
+    <div class="mb-3">
+        <label for="password1" class="form-label">Password</label>
+        {{ form.password1 }}
+    </div>
+    <div class="mb-3">
+        <label for="password2" class="form-label">Confirm Password</label>
+        {{ form.password2 }}
+    </div>
+    <div class="d-grid">
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </div>
+    <p class="text-center mt-3">
+        Already have an account? <a href="{% url 'login' %}">Login</a>
+    </p>
+</form>
+{% endblock formsection%}
