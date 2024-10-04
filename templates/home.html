@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-</head>
-<body>
+{% extends 'lay_out1.html' %}
+{% block section1 %}
     <h1>Welcome to your Home Page!</h1>
     <p>You are logged in as {{ user.username }}.</p>
 
@@ -13,5 +9,4 @@
         <button type="submit">Logout</button>
     </form>
 
-</body>
-</html>
+    {% endblock section1 %}
