@@ -24,7 +24,12 @@ def authView(request):
         form = UserCreationForm()  
         
     return render(request, "registration/signup.html", {"form": form})
+
 @never_cache
 def logoutview(request):
     logout(request)
     return redirect('/accounts/login/')
+@login_required
+def welcome(request):
+    
+    return render(request,'welcome.html')

@@ -1,7 +1,10 @@
 {% extends 'lay_out1.html' %}
+
 {% block section1 %}
+
     <h1>Welcome to your Home Page!</h1>
     <p>You are logged in as {{ user.username }}.</p>
+    <a href="{% url 'welcome' %}" > welcome page </a>
 
     <!-- Logout form with POST method -->
     <form method="POST" action="{% url 'logout' %}">
